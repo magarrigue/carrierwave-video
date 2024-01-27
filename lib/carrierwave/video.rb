@@ -1,4 +1,4 @@
-require 'streamio-ffmpeg'
+require 'rlovelett-ffmpeg'
 require 'carrierwave'
 require 'carrierwave/video/ffmpeg_options'
 require 'carrierwave/video/ffmpeg_theora'

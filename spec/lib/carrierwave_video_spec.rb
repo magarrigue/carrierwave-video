@@ -316,6 +316,18 @@ describe CarrierWave::Video do
 
         converter.encode_video(format, opts, &block)
       end
+      
+      it "allows block to modify preserve_aspect_ratio" do
+        block = Proc.new do |input, params|
+          params[:preserve_aspect_ratio] = :height
+        end
+
+        expect(movie).to receive(:transcode) do |path, format_opts, codec_opts|
+          expect(codec_opts).to eq({preserve_aspect_ratio: :height})
+        end
+
+        converter.encode_video(format, opts, &block)
+      end
     end
   end
 

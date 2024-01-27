@@ -11,8 +11,7 @@ module CarrierWave
         @logger = options[:logger]
         @unparsed = options
         @progress = options[:progress]
-        @preserve_aspect_ratio = options[:preserve_aspect_ratio] || :width
-
+        
         @format_options = defaults.merge(options)
       end
 
@@ -32,7 +31,7 @@ module CarrierWave
       end
 
       def encoder_options
-        { preserve_aspect_ratio: @preserve_aspect_ratio }
+        { preserve_aspect_ratio: @format_options[:preserve_aspect_ratio] || :width }
       end
 
       # input

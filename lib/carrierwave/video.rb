@@ -1,4 +1,4 @@
-require 'rlovelett-ffmpeg'
+require 'ruby-ffmpeg'
 require 'carrierwave'
 require 'carrierwave/video/ffmpeg_options'
 require 'carrierwave/video/ffmpeg_theora'

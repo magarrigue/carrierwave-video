@@ -1,4 +1,4 @@
-require 'streamio-ffmpeg'
+require 'ruby-ffmpeg'
 require 'carrierwave/video'
 
 RSpec.configure do |config|
